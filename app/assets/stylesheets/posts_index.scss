@@ -2,10 +2,11 @@
   // width: 1300px;
   .posts {
     // postを3つまで横並びにする
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    // display: grid;
+    // grid-template-columns: 1fr 1fr 1fr;
     // gap: 20px;
-    // display: flex;
+    display: flex;
+    flex-wrap: wrap;
     // flexboxのオプション どういう風に横並びにするかを指定
     justify-content: center;
     width: 100%;
