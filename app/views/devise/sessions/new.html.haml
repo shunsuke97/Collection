@@ -1,22 +1,29 @@
-= render partial: 'shared/header'
-%h2 Log in
-= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
-  .field
-    = f.label :name, "ニックネーム"
-    %br/
-    = f.email_field :name, autofocus: true, autocomplete: "name"
-  .field
-    = f.label :email, "メールアドレス"
-    %br/
-    = f.email_field :email, autofocus: true, autocomplete: "email"
-  .field
-    = f.label :password, "パスワード"
-    %br/
-    = f.password_field :password, autocomplete: "current-password"
-  - if devise_mapping.rememberable?
-    .field
-      = f.check_box :remember_me
-      = f.label :remember_me
-  .actions
-    = f.submit "ログイン"
-= render "devise/shared/links"
+.login_big_bg
+  = render partial: 'shared/header'
+  .login_wrapper_box
+    .login_upper_box
+      %h1 Log in
+      = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+        .field
+          -# = f.label :email, "メールアドレス"
+          %br/
+          = f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "メールアドレス"
+        .field
+          -# = f.label :password, "パスワード"
+          %br/
+          = f.password_field :password, autocomplete: "current-password", placeholder: "パスワード"
+        -# - if devise_mapping.rememberable?
+        -#   .field
+        -#     = f.check_box :remember_me
+        -#     = f.label :remember_me
+        .actions
+          = f.submit "ログイン"
+        %p ----- または ------
+        = link_to "" do
+          かんたんログイン
+      -# = render "devise/shared/links"
+    .login_bottom_box
+      %h1 Sign up
+      %p アカウントをお持ちでない方はこちらからご登録ください。
+      = link_to new_user_registration_path do
+        登録する
