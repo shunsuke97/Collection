@@ -1,0 +1,30 @@
+.login_big_bg
+  = render partial: 'shared/header'
+  .login_wrapper_box
+    .max_width_box
+      .login_upper_box
+        %h1 LOGIN
+        = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+          .field
+            -# = f.label :email, "メールアドレス"
+            -# %br/
+            = f.email_field :email, autofocus: true, autocomplete: "email", class: "input-default", placeholder: "メールアドレス"
+          .field
+            -# = f.label :password, "パスワード"
+            -# %br/
+            = f.password_field :password, autocomplete: "current-password", class: "input-default", placeholder: "パスワード"
+          -# - if devise_mapping.rememberable?
+          -#   .field
+          -#     = f.check_box :remember_me
+          -#     = f.label :remember_me
+          .submit
+            = f.submit "ログイン", class: "add_registration_btn"
+          %p ----- または ------
+          = link_to "" do
+            かんたんログイン
+        -# = render "devise/shared/links"
+      .login_bottom_box
+        %h1 SIGN UP
+        %p アカウントをお持ちでない方はこちらからご登録ください。
+        = link_to new_user_registration_path do
+          登録する
