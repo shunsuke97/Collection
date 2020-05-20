@@ -2,7 +2,8 @@
 @import "font-awesome-sprockets";
 @import "font-awesome";
 @import "shared/header";
-@import "top_index";
-@import "posts_index";
+@import "top/index";
+@import "posts/index";
+@import "posts/new";
 @import "registration";
 @import "login";

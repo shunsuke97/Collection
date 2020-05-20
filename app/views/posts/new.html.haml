@@ -1,0 +1,12 @@
+= render partial: 'shared/header'
+.posting_box
+  .container_box
+    = form_with(model: @post, local: true) do |form|
+      %h3
+        投稿する
+      = form.text_field :text
+      = form.text_field :title
+      = form.text_field :image
+      = form.text_field :author
+      = form.text_field :introduction
+      = form.submit "投稿"
