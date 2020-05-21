@@ -5,7 +5,7 @@
       -# %h3
       -#   投稿する
       %p フレーズ
-      = form.text_field :text,         class: "posting_input", placeholder: "50文字以内"
+      = form.text_field :text,         class: "posting_input", placeholder: "50文字以内", autofocus: true
       %p タイトル
       = form.text_field :title,        class: "posting_input", placeholder: "20文字以内"
       %p 画像
