@@ -84,8 +84,10 @@
           margin-right: 10px;
         }
         &__content {
+          // 数字や英単語も縦並びにする
+          // text-orientation: upright; 
           font-size: 15px;
-          line-height: 2.0;
+          line-height: 1.5;
           // text-overflow: ellipsis;
           margin-right: 10px;
         }
