@@ -1,0 +1,20 @@
+.post
+  .post__top
+    .post__top__user
+      %img.icon(src="" alt="")/
+      = link_to "" do
+        = post.user.name
+  .post__center
+    %img.image(src="" alt="")/
+    %h5.post__center__content
+      = post.text
+  .post__bottom
+    %p.post__bottom__title
+      『
+      = post.title
+      』
+    %p.post__bottom__author
+      著者:
+      = post.author
+    %p.post__bottom__content
+      = post.introduction
