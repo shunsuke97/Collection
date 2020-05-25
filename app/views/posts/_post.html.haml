@@ -12,7 +12,7 @@
             = link_to '詳細', "", method: :get
           - if user_signed_in? && current_user.id == post.user_id
             %li
-              = link_to '編集', "", method: :get
+              = link_to '編集', edit_post_path(post), method: :get
             %li
               = link_to '削除', "", method: :delete
   .post__center
