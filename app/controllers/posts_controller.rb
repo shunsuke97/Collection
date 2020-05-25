@@ -11,6 +11,10 @@ class PostsController < ApplicationController
     Post.create(post_params)
   end
 
+  def edit
+    @tweet = Post.find(params[:id])
+  end
+
   private
   def post_params
     params.require(:post).permit(:text, :title, :image, :author, :introduction).merge(user_id: current_user.id)
