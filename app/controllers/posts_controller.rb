@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show]
+  before_action :correct_user, only: [:edit, :update, :destroy]
 
   def index
     @posts = Post.all
@@ -25,6 +26,13 @@ class PostsController < ApplicationController
   private
   def post_params
     params.require(:post).permit(:text, :title, :image, :author, :introduction).merge(user_id: current_user.id)
+  end
+
+  def correct_user
+    post = Post.find(params[:id])
+    if current_user.id != post.user_id
+      redirect_to posts_path
+    end
   end
 
 end
