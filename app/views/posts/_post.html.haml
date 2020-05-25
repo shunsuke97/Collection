@@ -4,6 +4,17 @@
       %img.icon(src="" alt="")/
       = link_to "" do
         = post.user.name
+      .post__top__user__more
+        -# %span= image_tag 'arrow_top.png'
+        .fas.fa-angle-down
+        %ul.more_list
+          %li
+            = link_to '詳細', "", method: :get
+          - if user_signed_in? && current_user.id == post.user_id
+            %li
+              = link_to '編集', "", method: :get
+            %li
+              = link_to '削除', "", method: :delete
   .post__center
     %img.image(src="" alt="")/
     %h5.post__center__content
