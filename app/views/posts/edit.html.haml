@@ -1,0 +1,17 @@
+= render partial: 'shared/header'
+.posting_box
+  .container_box
+    = form_with(model: @post, url: post_path, local: true) do |form|
+      %h3
+        編集する
+      %p フレーズ
+      = form.text_field :text,         class: "posting_input", placeholder: "50文字以内"
+      %p タイトル
+      = form.text_field :title,        class: "posting_input", placeholder: "20文字以内"
+      %p 画像
+      = form.text_field :image,        class: "posting_input", placeholder: "画像URL"
+      %p 著者
+      = form.text_field :author,       class: "posting_input", placeholder: "20文字以内"
+      %p 説明
+      = form.text_area :introduction,  class: "posting_input", placeholder: "120文字以内", rows: "8"
+      = form.submit "完了", class: "posting_submit_btn"
