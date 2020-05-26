@@ -14,7 +14,7 @@
             %li
               = link_to '編集', edit_post_path(post), method: :get
             %li
-              = link_to '削除', "", method: :delete
+              = link_to '削除', "/tweets/#{tweet.id}", method: :delete
   .post__center
     %img.image(src="" alt="")/
     %h5.post__center__content
