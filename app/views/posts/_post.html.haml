@@ -9,7 +9,7 @@
         .fas.fa-angle-down
         %ul.more_list
           %li
-            = link_to '詳細', "", method: :get
+            = link_to '詳細', "/posts/#{post.id}", method: :get
           - if user_signed_in? && current_user.id == post.user_id
             %li
               = link_to '編集', edit_post_path(post), method: :get
