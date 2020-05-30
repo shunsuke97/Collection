@@ -41,15 +41,11 @@
         %p ※コメントの投稿には新規登録/ログインが必要です※
       .comments
         %h4 ＜コメント一覧＞
-        .comment
-          %strong
-            = link_to "" do
-              ユーザ名 
-            ：
-          コメント
-        .comment
-          %strong
-            = link_to "" do
-              ユーザ名 
-            ：
-          コメント
+        - if @comments
+          - @comments.each do |comment|
+            .comment
+              %strong
+                = link_to "" do
+                  = comment.user.name
+                ：
+              = comment.text
