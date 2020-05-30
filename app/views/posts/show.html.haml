@@ -35,7 +35,13 @@
     .comment_wrapper
       .comments
         %h4 ＜コメント一覧＞
-        %p
+        .comment
+          %strong
+            = link_to "" do
+              ユーザ名 
+            ：
+          コメント
+        .comment
           %strong
             = link_to "" do
               ユーザ名 
