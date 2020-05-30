@@ -33,6 +33,12 @@
         %p.post__bottom__content
           = @post.introduction
     .comment_wrapper
+      - if current_user
+        = form_with(model: @comment, url: "/posts/#{@post.id}/comments", local: true) do |form|
+          = form.text_area :text, class: "comments_input", placeholder: "コメントする"
+          = form.submit "投稿", class: "comments_submit_btn"
+      - else
+        %p ※コメントの投稿には新規登録/ログインが必要です※
       .comments
         %h4 ＜コメント一覧＞
         .comment
