@@ -37,6 +37,9 @@
         &:hover ul.more_list {
           display: block;
         }
+        .fas.fa-angle-down {
+          opacity: 0.1;
+        }
         ul.more_list {
           position: absolute;
           text-align: left;
