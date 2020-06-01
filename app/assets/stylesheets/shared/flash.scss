@@ -1,13 +1,29 @@
-.notification {
-  .notice {
-    background-color: #38AEF0;
-    color: #fff;
-    text-align: center;
-  }
+// .notification {
+//   .notice {
+//     background-color: #38AEF0;
+//     color: #fff;
+//     text-align: center;
+//   }
 
-  .alert {
-    background-color: #F35500;
-    color: #fff;
-    text-align: center;
-  }
+//   .alert {
+//     background-color: #F35500;
+//     color: #fff;
+//     text-align: center;
+//   }
+// }
+.alert {
+  text-align: center;
+  padding: 3px;
+  margin: 0;
+}
+.alert-info {
+    background-color: #bde9ff;
+    border-color: #bde9ff;
+    color: #4c6977;
+}
+
+.alert-danger {
+    background-color: #f3c0c0;
+    border-color: #f3c0c0;
+    color: #3e3a3a;
 }

@@ -1,3 +1,12 @@
-.notification
-  - flash.each do |key, value|
-    = content_tag :div, value, class: key
+-# .notification
+-#   - flash.each do |key, value|
+-#     = content_tag :div, value, class: key
+- if notice
+  .alert.alert-info
+    = notice
+    -# %button.close{"data-dismiss" => "alert", :type => "button"} ×
+    %button.close{"data-dismiss": "alert", type: "button"} ✕
+- elsif alert
+  .alert.alert-danger
+    = alert
+    %button.close{"data-dismiss": "alert", type: "button"} ✕
