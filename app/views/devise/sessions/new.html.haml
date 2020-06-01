@@ -20,7 +20,7 @@
           .submit
             = f.submit "ログイン", class: "add_registration_btn"
           %p ----- または ------
-          = link_to "" do
+          = link_to users_guest_sign_in_path, method: :post do
             かんたんログイン
         -# = render "devise/shared/links"
       .login_bottom_box
