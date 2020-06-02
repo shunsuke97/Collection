@@ -29,6 +29,7 @@
         height: 100px;
         width: 80px;
         text-align: right;
+        opacity: 0.6;
         &:hover ul.more_list {
           display: block;
         }
@@ -55,8 +56,7 @@
               display: block;
               padding: 5px;
               &:hover {
-                background-color: #57C3E9;
-                color: #fff;
+                background-color: #F5F5DC;
               }
             }
           }
