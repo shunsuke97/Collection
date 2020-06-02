@@ -19,7 +19,7 @@
                 %li
                   = link_to '削除', "/posts/#{@post.id}", method: :delete
       .post__center
-        %img.image(src="" alt="")/
+        = image_tag @post.image.url, class: "post__center__image"
         %h5.post__center__content
           = @post.text
       .post__bottom
