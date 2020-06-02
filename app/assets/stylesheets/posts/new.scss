@@ -32,6 +32,9 @@
       border-radius: 5px;
       font-family: "游ゴシック", "YuGothic";
     }
+    .posting_image {
+      margin: auto;
+    }
     .posting_submit_btn {
       width: 100%;
       background-color: #57C3E9;
@@ -39,6 +42,7 @@
       color: #fff;
       border: 0;
       font-size: 18px;
+      margin-top: 20px;
     }
   }
 }
