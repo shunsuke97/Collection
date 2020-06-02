@@ -4,6 +4,10 @@
   display: flex;
   .show_content {
     margin: 0 auto;
+    .show_more {
+      box-shadow: none;
+      border: 0.1px solid #ddd;
+    }
     .comment_wrapper {
       // width: 720px;
       margin: 20px 0;
