@@ -77,11 +77,10 @@
     width: 100%;
     // flex-direction: column;
     // justify-content: space-around;
-    &__image {
+    .image {
       display: block;
       width: 200px;
       height: 100%;
-      background-color: red;
       margin-left: 25px;
     }
     &__content {
