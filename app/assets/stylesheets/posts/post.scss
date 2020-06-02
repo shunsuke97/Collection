@@ -1,4 +1,5 @@
 .post {
+  font-family: 'ヒラギノ明朝 ProN','Hiragino Mincho ProN',sans-serif;
   border: solid 0.5px rgba(0,0,0,0.2);
   border-radius: 5px 5px 5px 50px;
   height: 650px;
@@ -79,7 +80,6 @@
     &__content {
       width: 50px;
       writing-mode: vertical-rl;
-      font-size: 1.25rem;
       line-height: 1.2;
       margin-right: 25px;
     }
