@@ -14,9 +14,11 @@
         %li.hover_block
           = current_user.name
           .fas.fa-angle-down
-          .user__info
-            = link_to "マイページ", ""
-            = link_to "ログアウト", destroy_user_session_path, method: :delete
+          %ul.user__info
+            %li
+              = link_to "マイページ", ""
+            %li
+              = link_to "ログアウト", destroy_user_session_path, method: :delete
         %li
           = link_to new_post_path do
             投稿する

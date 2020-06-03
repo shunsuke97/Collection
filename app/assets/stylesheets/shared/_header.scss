@@ -1,22 +1,27 @@
 .header {
   display: flex;
   justify-content: space-between;
-  // max-width: 1100px;
   margin: 0 auto;
   padding: 0 4%;
   .title {
     width: 210px;
-    margin-top: 34px;
+    margin-top: 25px;
     a {
       text-decoration: none;
     }
   }
   .nav {
+    a {
+      color: black;
+    }
     .main-nav {
       display: flex;
-      // font-size: 1.25rem;
+      :hover {
+        text-decoration: none;
+        color: #696969;
+      }
       text-transform: uppercase;
-      margin-top: 34px;
+      margin-top: 25px;
       list-style: none;
       li {
         margin-left: 36px;
@@ -24,57 +29,24 @@
       .hover_block {
         position: relative;
         text-decoration: none;
-        color: #432;
         .fas.fa-angle-down {
           opacity: 0.6;
         }
         &:hover .user__info{
           display: block;
-          background-color: white;
         }
         .user__info {
           display: none;
           position: absolute;
-      // top: 46px;
-      // right: 0;
-      // border-left: 1px solid #d8d8d8;
-      // border-right: 1px solid #d8d8d8;
-      // box-shadow: 1px 2px 5px rgba(0,0,0,0.1);
-      //     a {
-      //     display: block;
-      //     padding: 10px 20px;
-      //     text-align: left;
-      //     border-bottom: 1px solid #d8d8d8;
-      //     }
+          li {
+            margin: auto;
+            margin-top: 5px;
+            a {
+              display: block;
+              margin-top: 5px;
+            }
+          }
         }
-        // .user__info {
-        //   display: none;
-          // position: absolute;
-          // text-align: left;
-          // width: 80px;
-          // right: 0;
-          // font-size: 12px;
-          // background-color: #fff;
-          // border: 1px solid #ddd;
-          // display: none;
-          // box-shadow: 1px 1px 2px rgba(0,0,0,0.2);
-          // border-radius: 3px;
-          // li {
-          //   background-color: #f0f0f0;
-          //   &:last-child {
-          //     border-bottom: 0;
-          //   }
-          //   a {
-          //     display: block;
-          //     padding: 10px 20px;
-          //     text-align: left;
-          //     border-bottom: 1px solid #d8d8d8;
-          //     // li:hover {
-          //     //   display: block;
-          //     // }
-          //   }
-          // }
-        // }
       }
     }
   }
