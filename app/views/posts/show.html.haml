@@ -1,51 +1,50 @@
-= render partial: 'shared/header'
-.show_wrapper
-  .show_content
-    .post
-      .post__top
-        .post__top__user
-          %img.icon(src="" alt="")/
-          = link_to "" do
-            = @post.user.name
-          .post__top__user__more
-            -# %span= image_tag 'arrow_top.png'
-            .fas.fa-angle-down
-            %ul.more_list
-              %li
-                -# = link_to '詳細', "/posts/#{@post.id}", method: :get
-              - if user_signed_in? && current_user.id == @post.user_id
+.paper__bg
+  = render partial: 'shared/header'
+  .show_wrapper
+    .show_content
+      .post
+        .post__top
+          .post__top__user
+            %img.icon(src="" alt="")/
+            = link_to "" do
+              = @post.user.name
+            .post__top__user__more
+              .fas.fa-angle-down
+              %ul.more_list.show_more
                 %li
-                  = link_to '編集', edit_post_path(@post), method: :get
-                %li
-                  = link_to '削除', "/posts/#{@post.id}", method: :delete
-      .post__center
-        = image_tag @post.image.url, class: "post__center__image"
-        %h5.post__center__content
-          = @post.text
-      .post__bottom
-        %p.post__bottom__title
-          『
-          = @post.title
-          』
-        %p.post__bottom__author
-          著者:
-          = @post.author
-        %p.post__bottom__content
-          = @post.introduction
-    .comment_wrapper
-      - if current_user
-        = form_with(model: @comment, url: "/posts/#{@post.id}/comments", local: true) do |form|
-          = form.text_area :text, class: "comments_input", placeholder: "コメントする"
-          = form.submit "投稿", class: "comments_submit_btn"
-      - else
-        %p ※コメントの投稿には新規登録/ログインが必要です※
-      .comments
-        %h4 ＜コメント一覧＞
-        - if @comments
-          - @comments.each do |comment|
-            .comment
-              %strong
-                = link_to "" do
-                  = comment.user.name
-                ：
-              = comment.text
+                - if user_signed_in? && current_user.id == @post.user_id
+                  %li
+                    = link_to '編集', edit_post_path(@post), method: :get
+                  %li
+                    = link_to '削除', "/posts/#{@post.id}", method: :delete
+        .post__center
+          = image_tag @post.image.url, class: "post__center__image"
+          %h5.post__center__content
+            = @post.text
+        .post__bottom
+          %p.post__bottom__title
+            『
+            = @post.title
+            』
+          %p.post__bottom__author
+            著者:
+            = @post.author
+          %p.post__bottom__content
+            = @post.introduction
+      .comment_wrapper
+        - if current_user
+          = form_with(model: @comment, url: "/posts/#{@post.id}/comments", local: true) do |form|
+            = form.text_area :text, class: "comments_input", placeholder: "コメントする"
+            = form.submit "投稿", class: "comments_submit_btn"
+        - else
+          %p ※コメントの投稿には新規登録/ログインが必要です※
+        .comments
+          %h4 ＜コメント一覧＞
+          - if @comments
+            - @comments.each do |comment|
+              .comment
+                %strong
+                  = link_to "" do
+                    = comment.user.name
+                  ：
+                = comment.text

@@ -5,32 +5,19 @@
       .registrations_upper_box
         %h1 SIGN UP
         = form_for(resource, as: resource_name, url: registration_path(resource_name), class: "user_info_form") do |f|
-          -# = render "devise/shared/error_messages", resource: resource
           .field
-            -# = f.label :name
-            -# %br/
             = f.text_field :name, autofocus: true, autocomplete: "name", class: "input-default", placeholder: "ニックネーム"
           .field
-            -# = f.label :email
-            -# %br/
             = f.email_field :email, autocomplete: "email", class: "input-default", placeholder: "メールアドレス"
           .field
-            -# = f.label :password, "パスワード"
-            -# - if @minimum_password_length
-            -#   %em
-                -# (#{@minimum_password_length} characters minimum)
             %br/
             = f.password_field :password, autocomplete: "new-password", class: "input-default", placeholder: "パスワード(#{@minimum_password_length}文字以上)"
           .field
-            -# = f.label :password_confirmation, "パスワードの確認"
-            -# %br/
             = f.password_field :password_confirmation, autocomplete: "new-password", class: "input-default", placeholder: "パスワードの確認"
           .submit
             = f.submit "登録", class: "add_registration_btn"
       .registrations_bottom_box
-        -# = render "devise/shared/links"
         %h1 LOGIN
         %p 既にアカウントをお持ちの方はこちらからログインしてください。
         = link_to new_user_session_path do
           ログイン
-          .bottom_box_login_btn

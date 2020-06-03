@@ -8,22 +8,20 @@
         = link_to "" do
           初めての方へ
       %li
-        = link_to "" do
-          コラム
-      %li
         = link_to posts_path do
           投稿一覧
       - if user_signed_in?
-        %li
-        = link_to "" do
-          ユーザ名
+        %li.hover_block
+          = current_user.name
+          .fas.fa-angle-down
           %ul.user__info
-          %li
-            = link_to "マイページ", ""
-            = link_to "ログアウト", destroy_user_session_path, method: :delete
-          %li
-        = link_to new_post_path do
-          投稿する
+            %li
+              = link_to "マイページ", ""
+            %li
+              = link_to "ログアウト", destroy_user_session_path, method: :delete
+        %li
+          = link_to new_post_path do
+            投稿する
       - else
         %li
           = link_to new_user_registration_path do

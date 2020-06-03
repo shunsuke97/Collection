@@ -6,23 +6,16 @@
         %h1 LOGIN
         = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
           .field
-            -# = f.label :email, "メールアドレス"
-            -# %br/
             = f.email_field :email, autofocus: true, autocomplete: "email", class: "input-default", placeholder: "メールアドレス"
           .field
-            -# = f.label :password, "パスワード"
-            -# %br/
             = f.password_field :password, autocomplete: "current-password", class: "input-default", placeholder: "パスワード"
-          -# - if devise_mapping.rememberable?
-          -#   .field
-          -#     = f.check_box :remember_me
-          -#     = f.label :remember_me
           .submit
             = f.submit "ログイン", class: "add_registration_btn"
-          %p ----- または ------
+          .login_separate
+            or
           = link_to users_guest_sign_in_path, method: :post do
             かんたんログイン
-        -# = render "devise/shared/links"
+          %p ※かんたんログインによって、ゲストユーザとして・投稿・コメントなどをお楽しみ頂けます↑
       .login_bottom_box
         %h1 SIGN UP
         %p アカウントをお持ちでない方はこちらからご登録ください。

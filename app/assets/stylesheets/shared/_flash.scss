@@ -1,0 +1,19 @@
+.alert {
+  text-align: center;
+  padding: 3px;
+  margin: 0;
+  .close {
+    margin-right: 10px;
+  }
+}
+.alert-info {
+    background-color: #F0FFFF;
+    border-color: #bde9ff;
+    color: #4c6977;
+}
+
+.alert-danger {
+    background-color: #f3c0c0;
+    border-color: #f3c0c0;
+    color: #3e3a3a;
+}

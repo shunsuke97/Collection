@@ -1,0 +1,24 @@
+.paper__bg {
+  background-image: url("#{asset_path('paper.jpg')}");
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  .index_wrapper {
+    .posts {
+      display: flex;
+      flex-wrap: wrap;
+      // flexboxのオプション どういう風に横並びにするかを指定
+      justify-content: center;
+      width: 100%;
+    }
+    .index_paginate {
+      text-align: center;
+      margin:0 auto;
+    }
+  }
+}
+
+.all_views_white__bg {
+  background-color: #F4F5F7;
+}

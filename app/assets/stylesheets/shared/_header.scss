@@ -1,0 +1,53 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 0 4%;
+  .title {
+    width: 210px;
+    margin-top: 25px;
+    a {
+      text-decoration: none;
+    }
+  }
+  .nav {
+    a {
+      color: black;
+    }
+    .main-nav {
+      display: flex;
+      :hover {
+        text-decoration: none;
+        color: #696969;
+      }
+      text-transform: uppercase;
+      margin-top: 25px;
+      list-style: none;
+      li {
+        margin-left: 36px;
+      }
+      .hover_block {
+        position: relative;
+        text-decoration: none;
+        .fas.fa-angle-down {
+          opacity: 0.6;
+        }
+        &:hover .user__info{
+          display: block;
+        }
+        .user__info {
+          display: none;
+          position: absolute;
+          li {
+            margin: auto;
+            margin-top: 5px;
+            a {
+              display: block;
+              margin-top: 5px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
