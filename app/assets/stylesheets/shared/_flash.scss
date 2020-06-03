@@ -1,23 +1,13 @@
-// .notification {
-//   .notice {
-//     background-color: #38AEF0;
-//     color: #fff;
-//     text-align: center;
-//   }
-
-//   .alert {
-//     background-color: #F35500;
-//     color: #fff;
-//     text-align: center;
-//   }
-// }
 .alert {
   text-align: center;
   padding: 3px;
   margin: 0;
+  .close {
+    margin-right: 10px;
+  }
 }
 .alert-info {
-    background-color: #bde9ff;
+    background-color: #F0FFFF;
     border-color: #bde9ff;
     color: #4c6977;
 }
