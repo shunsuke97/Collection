@@ -2,7 +2,7 @@
   padding: 45px 30px 0px;
   .max_width_box {
     margin: 10px auto;
-    max-width: 24rem;
+    width: 40%;
     .login_upper_box {
       margin-bottom: 15px;
       margin-left: -60px;
@@ -20,81 +20,105 @@
       .field {
         margin-top: 5px;
         .input-default {
-          margin-top: 5px;
-          height: 25px;
+          margin-top: 10px;
+          height: 50px;
           width: 100%;
           padding: 0.8em;
+          border: none;
         }
       } 
       .submit {
-        margin-top: 10px;
+        margin-top: 20px;
         .add_registration_btn {
+          font-family: "Roboto", sans-serif;;
+          width: 171px;
+          height: 40px;
           display       : inline-block;
-          font-size     : 15pt;        /* 文字サイズ */
-          text-align    : center;      /* 文字位置   */
-          cursor        : pointer;     /* カーソル   */
-          padding       : 10px 90px;   /* 余白       */
-          background    : #000000;     /* 背景色     */
-          color         : #ffffff;     /* 文字色     */
-          line-height   : 1em;         /* 1行の高さ  */
-          opacity       : 1;           /* 透明度     */
-          transition    : .3s;         /* なめらか変化 */
+          border-radius : 4%;
+          font-size     : 15px;
+          text-align    : center;
+          cursor        : pointer;
+          padding       : 8px 39px;
+          background    : rgba(0, 0, 0, 0.86);
+          color         : #ffffff;
+          line-height   : 1em;
+          opacity       : 1;
+          transition    : .3s;
+          box-shadow    : 1px 1px 3px #666666;
         }
         .add_registration_btn:hover {
-          opacity       : 0.8;         /* カーソル時透明度 */
+          box-shadow    : none; 
+          opacity       : 0.8;
+        }
+      }
+      .login_separate {
+        width: 165px;
+        font-size: 16px;
+        margin: 20px 0;
+        text-align: center;
+      }
+      a {
+        font-family: serif;
+        display       : inline-block;
+        border-radius : 4%;
+        font-size     : 15px;
+        text-align    : center;
+        cursor        : pointer;
+        padding       : 12px 27px;
+        background    : rgba(0, 0, 0, 0.86);
+        color         : #ffffff;
+        line-height   : 1em;
+        opacity       : 1;
+        transition    : .3s;
+        box-shadow    : 1px 1px 3px #666666;
+        &:hover {
+          box-shadow    : none; 
+          opacity       : 0.8;
+          text-decoration: none;
         }
       }
       p {
         margin: 20px 0;
       }
-      a {
-        display       : inline-block;
-        text-decoration: none;
-          font-size     : 15pt;        /* 文字サイズ */
-          text-align    : center;      /* 文字位置   */
-          cursor        : pointer;     /* カーソル   */
-          padding       : 10px 90px;   /* 余白       */
-          background    : #000000;     /* 背景色     */
-          color         : #ffffff;     /* 文字色     */
-          line-height   : 1em;         /* 1行の高さ  */
-          opacity       : 1;           /* 透明度     */
-          transition    : .3s;         /* なめらか変化 */
-      }
     }
-
     .login_bottom_box {
       margin-top: 100px;
       h1 {
         font-family: "Roboto", sans-serif;
-          font-style: normal;
-          font-weight: 500;
-          font-size: 40px;
-          line-height: 45px;
-          letter-spacing: 0.07em;
-          color: #000000;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 40px;
+        line-height: 45px;
+        letter-spacing: 0.07em;
+        color: #000000;
       }
       p {
         margin-top: 10px;
-          margin-bottom: 10px;
-          font-size: 15px;
+        margin-bottom: 10px;
+        font-size: 15px;
       }
       a {
-        background    : #000000;     /* 背景色     */
-              color         : #ffffff;     /* 文字色     */
-          font-size:0.75em;
-          display:block;
-          width:100px;
-          // padding-top:10px;
-          // padding-bottom:10px;
-          cursor        : pointer;     /* カーソル   */
-              padding       : 10px 90px;   /* 余白       */
-          text-align:center;
-          border:2px solid;
-          border-color:#aaaaaa;
+        text-align: center;
+        font-family: "Roboto", sans-serif;;
+        width: 171px;
+        height: 40px;
+        display       : inline-block;
+        border-radius : 4%;
+        font-size     : 15px;
+        text-align    : center;
+        cursor        : pointer;
+        padding       : 12px 55px;
+        background    : rgba(0, 0, 0, 0.86);
+        color         : #ffffff;
+        line-height   : 1em;
+        opacity       : 1;
+        transition    : .3s;
+        box-shadow    : 1px 1px 3px #666666;
+        &:hover {
+          box-shadow    : none; 
+          opacity       : 0.8;
           text-decoration: none;
-          line-height   : 1em;         /* 1行の高さ  */
-              opacity       : 1;           /* 透明度     */
-              transition    : .3s;         /* なめらか変化 */
+        }
       }
     }
   }
