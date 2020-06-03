@@ -1,5 +1,9 @@
-.all_views_white__bg {
-  background-color: #F4F5F7;
+.paper__bg {
+  background-image: url("#{asset_path('paper.jpg')}");
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
   .index_wrapper {
     .posts {
       display: flex;
@@ -13,4 +17,8 @@
       margin:0 auto;
     }
   }
+}
+
+.all_views_white__bg {
+  background-color: #F4F5F7;
 }
