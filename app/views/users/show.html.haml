@@ -3,7 +3,8 @@
   %p 
     = @name
     さんの投稿一覧
-  .posts
-    - @posts.each do |post|
-      = render partial: "post", locals: { post: post }
-  .index_paginate= paginate(@posts)
+  .index_wrapper
+    .posts
+      - @posts.each do |post|
+        = render partial: "posts/post", locals: { post: post }
+    .index_paginate= paginate(@posts)
