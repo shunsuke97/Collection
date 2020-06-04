@@ -1,0 +1,10 @@
+.paper__bg
+  = render partial: 'shared/header'
+  .mypage__top
+    = @name
+    さんの投稿一覧
+  .index_wrapper
+    .posts
+      - @posts.each do |post|
+        = render partial: "posts/post", locals: { post: post }
+    .index_paginate= paginate(@posts)

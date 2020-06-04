@@ -16,7 +16,7 @@
           .fas.fa-angle-down
           %ul.user__info
             %li
-              = link_to "マイページ", ""
+              = link_to "マイページ", "/users/#{current_user.id}"
             %li
               = link_to "ログアウト", destroy_user_session_path, method: :delete
         %li

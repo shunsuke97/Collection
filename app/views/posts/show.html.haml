@@ -44,7 +44,7 @@
             - @comments.each do |comment|
               .comment
                 %strong
-                  = link_to "" do
+                  = link_to "/users/#{@post.user.id}" do
                     = comment.user.name
                   ：
                 = comment.text

@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
+  # deviseのregistrations_controllerにusers/registrations_controllerを参照させる
   devise_for :users, controllers: {
-    # deviseのregistrations_controllerにusers/registrations_controllerを参照させる
     registrations: 'users/registrations'
   }
   devise_scope :user do
@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   end
 
   root "top#index"
+  get 'users/:id', to: 'users#show'
   resources :posts do
     resources :comments, only: [:create]
   end
