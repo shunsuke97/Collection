@@ -21,5 +21,14 @@ $(function(){
       processData: false,
       contentType: false
     })
+    .done(function(data){
+      var html = buildHTML(data);
+      $('.comments').append(html);
+      $('.comments_input').val('');
+      $('.comments_submit_btn').prop('disabled', false);
+    })
+    .fail(function(){
+      alert('error');
+    })
   })
 })
