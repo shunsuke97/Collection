@@ -33,7 +33,7 @@
             = @post.introduction
       .comment_wrapper
         - if current_user
-          = form_with(model: @comment, url: "/posts/#{@post.id}/comments", local: true) do |form|
+          = form_with(model: @comment, url: "/posts/#{@post.id}/comments", local: true, id: "new_comment") do |form|
             = form.text_area :text, class: "comments_input", placeholder: "コメントする"
             = form.submit "投稿", class: "comments_submit_btn"
         - else
