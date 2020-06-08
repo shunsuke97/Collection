@@ -7,8 +7,9 @@ Rails.application.routes.draw do
     post 'users/guest_sign_in', to: 'users/sessions#new_guest'
   end
 
-  root "top#index"
   get 'users/:id', to: 'users#show'
+
+  root "top#index"
   resources :posts do
     resources :comments, only: [:create]
   end
