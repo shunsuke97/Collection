@@ -19,6 +19,9 @@
             %i.fas.fa-user
               = link_to "マイページ", "/users/#{current_user.id}"
             %li
+            %i.fas.fa-edit
+              = link_to "ユーザー編集", edit_user_registration_path
+            %li
             %i.fas.fa-sign-out-alt
               = link_to "ログアウト", destroy_user_session_path, method: :delete
         %li
