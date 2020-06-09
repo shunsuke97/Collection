@@ -12,5 +12,8 @@ Rails.application.routes.draw do
   root "top#index"
   resources :posts do
     resources :comments, only: [:create]
+    collection do
+      get 'search'
+    end
   end
 end
