@@ -9,4 +9,10 @@ class Post < ApplicationRecord
   validates :introduction,    length: { maximum: 120 } , presence: true
 
   mount_uploader :image, ImageUploader
+
+  def self.search(search)
+    # 引数で渡されるsearchの中に何もなければ全ての投稿を取得する
+    return Post.all unless search
+    Post.where('text LIKE(?)', "%#{search}%")
+  end
 end
