@@ -5,8 +5,42 @@
   background-position: center top;
   background-repeat: no-repeat;
   .index_wrapper {
+    margin-top: 10px;
+    .index_search_box {
+      height: 55px;
+      width: 100%;
+      .index_search_form {
+        margin: 20px auto;
+        position:relative;
+        height: 50px;
+        max-width:300px;
+        .index_search_input {
+          height: 100%;
+          width: 300px;
+          padding: 0 10px; 
+          position: absolute; 
+          left: 0;
+          top: 0; 
+          border-radius:16px;
+          border: solid 0.5px rgba(0, 0, 0, 0.2);
+          outline: 0;
+          background:#eee;
+        }
+        .index_search_button {
+          height: 50px;
+          position: absolute; 
+          left: 262px;
+          top: 0;
+          background: none;
+          color:#666;
+          border: none;
+          font-size: 20px;
+          opacity: 0.5;
+        }
+      }
+    }
     .posts {
-      margin-top: 55px;
+      margin-top: 5px;
       display: flex;
       flex-wrap: wrap;
       // flexboxのオプション どういう風に横並びにするかを指定
