@@ -34,6 +34,10 @@ class PostsController < ApplicationController
     @comment = Comment.new
   end
 
+  def search
+    @posts = Post.search(params[:keyword]).order("created_at DESC")
+  end
+
   private
   def post_params
     params.require(:post).permit(:text, :title, :image, :author, :introduction).merge(user_id: current_user.id)
