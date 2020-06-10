@@ -5,7 +5,7 @@
       = form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f|
         %h3
           編集する
-        %p ニックネーム
+        %p ニックネーム(8文字以下)
         = f.text_field :name,                      class: "user_edit_input"
         %p メールアドレス
         = f.email_field :email,                    class: "user_edit_input"

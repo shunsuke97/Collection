@@ -5,7 +5,7 @@ class User < ApplicationRecord
   has_many :posts
   has_many :comments
 
-  validates :name, presence: true, uniqueness: true
+  validates :name, presence: true, uniqueness: true, length: { maximum: 8 }
 
 
   def update_without_current_password(params, *options)
