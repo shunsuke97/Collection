@@ -6,7 +6,7 @@
         %h1 SIGN UP
         = form_for(resource, as: resource_name, url: registration_path(resource_name), class: "user_info_form") do |f|
           .field
-            = f.text_field :name, autofocus: true, autocomplete: "name", class: "input-default", placeholder: "ニックネーム"
+            = f.text_field :name, autofocus: true, autocomplete: "name", class: "input-default", placeholder: "ニックネーム(8文字以下)"
           .field
             = f.email_field :email, autocomplete: "email", class: "input-default", placeholder: "メールアドレス"
           .field
