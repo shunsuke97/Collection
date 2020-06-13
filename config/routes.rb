@@ -9,7 +9,8 @@ Rails.application.routes.draw do
 
   get 'users/:id', to: 'users#show'
 
-  root "top#index"
+  root "posts#index"
+  resources :top, only: [:index]
   resources :posts do
     resources :comments, only: [:create]
     collection do
