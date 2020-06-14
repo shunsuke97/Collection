@@ -13,7 +13,7 @@
             %li
               = link_to '編集', edit_post_path(post), method: :get
             %li
-              = link_to '削除', "/posts/#{post.id}", method: :delete
+              = link_to '削除', "/posts/#{post.id}", method: :delete, data: { confirm: "本当に削除しますか？" }
   .post__center
     = image_tag post.image.url, class: "post__center__image"
     %h5.post__center__content
