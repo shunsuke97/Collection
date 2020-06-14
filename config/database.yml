@@ -18,5 +18,5 @@ production:
   <<: *default
   database: originalApp_production
   username: root
-  password: <%= ENV['DATABASE_PASSWORD'] %>
+  password: <%= Rails.application.credentials.database_password %>
   socket: /var/lib/mysql/mysql.sock
