@@ -17,7 +17,8 @@
 /public/assets
 .byebug_history
 
-# Ignore master key for decrypting credentials and more.
+# credential.ymlを使う際に、master.keyはgitにあげてはならない
+# 反対に、credential.yml.encは.gitignoreに入れてはならない
 /config/master.key
 
 # 投稿された画像

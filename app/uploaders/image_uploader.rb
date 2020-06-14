@@ -1,7 +1,8 @@
 class ImageUploader < CarrierWave::Uploader::Base
   include CarrierWave::MiniMagick
 
-  storage :file
+  # 画像のアップロード先を指定
+  storage :fog
 
   # 画像の縦横比を維持したまま、widthを最大200px、heightを最大324pxとする
   process resize_to_fit: [200, 324]
