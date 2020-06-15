@@ -5,17 +5,21 @@
   background-position: center top;
   background-repeat: no-repeat;
   .beginners_wrapper {
-    margin: 50px auto;
+    position: relative;
+    margin: 70px auto;
     width: 600px;
-    height: 500px;
+    height: 420px;
     background-color: #F4F5F7;
     opacity: 0.75;
     .beginners_content {
+      position: absolute;
+      right: 0;
+      left: 0;
+      bottom: 0;
       font-family: serif;
       margin: 25px auto;
-      width: 400px;
-      height: 400px;
-      // text-align: center;
+      width: 420px;
+      height: 340px;
       .beginners_title {
         text-align: center;
         margin-bottom: 20px;
