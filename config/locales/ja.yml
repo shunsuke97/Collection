@@ -6,3 +6,29 @@ ja:
       previous: <i class="fas fa-angle-left"></i>
       next: <i class="fas fa-angle-right"></i>
       truncate: "..."
+  activerecord:
+    errors:
+      models:
+        post:
+          attributes:
+            text:
+              blank: 'を入力してください'
+              too_long: 'は50文字以内で入力してください'
+            title:
+              blank: 'を入力してください'
+              too_long: 'は20文字以内で入力してください'
+            image:
+              blank: 'を選択してください'
+            author:
+              blank: 'を入力してください'
+              too_long: 'は20文字以内で入力してください'
+            introduction:
+              blank: 'を入力してください'
+              too_long: 'は120文字以内で入力してください'
+    attributes:
+      post:
+        text: '「フレーズ」'
+        title: '「タイトル」'
+        image: '「画像」'
+        author: '「著者」'
+        introduction: '「説明」'

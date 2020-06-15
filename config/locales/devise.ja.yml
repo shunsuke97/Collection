@@ -42,6 +42,8 @@ ja:
     failure:
         already_authenticated: "すでにログインしています。"
         invalid: "%{authentication_keys}またはパスワードが違います。"
+        user:
+          not_found_in_database: "ユーザーが見つかりません。入力内容を再度ご確認ください。"
     mailer:
       confirmation_instructions:
         action: "アカウント確認"
@@ -79,11 +81,16 @@ ja:
         we_need_your_current_password_to_confirm_your_changes: "変更を反映するには現在のパスワードを入力してください"
       new:
         sign_up: "アカウント登録"
+      user:
+        signed_up: "新規登録が完了しました。"
+        destroyed: 削除が完了しました。またのご利用をお待ちしております。
+        updated: "ユーザー情報の編集が完了しました。"
     sessions:
       signed_in: "ログインしました。"
       new:
         sign_in: "ログインしました。"
       user:
+        signed_up: "新規登録が完了しました。"
         signed_out: "ログアウトしました。"
     shared:
       links:

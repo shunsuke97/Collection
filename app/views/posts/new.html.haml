@@ -3,6 +3,7 @@
   .posting_box
     .container_box
       = form_with(model: @post, local: true) do |form|
+        = render 'layouts/error_messages', model: form.object
         %p フレーズ
         = form.text_field :text,         class: "posting_input", placeholder: "50文字以内", autofocus: true
         %p タイトル
