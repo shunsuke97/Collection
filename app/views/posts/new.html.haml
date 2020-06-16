@@ -5,13 +5,13 @@
       = form_with(model: @post, local: true) do |form|
         = render 'layouts/error_messages', model: form.object
         %p フレーズ
-        = form.text_field :text,         class: "posting_input", placeholder: "50文字以内", autofocus: true
+        = form.text_field :text,         class: "posting_input", placeholder: "60文字以内", autofocus: true
         %p タイトル
         = form.text_field :title,        class: "posting_input", placeholder: "20文字以内"
         %p 著者
-        = form.text_field :author,       class: "posting_input", placeholder: "20文字以内"
+        = form.text_field :author,       class: "posting_input", placeholder: "12文字以内"
         %p 説明
-        = form.text_area  :introduction, class: "posting_input", placeholder: "120文字以内", rows: "8"
+        = form.text_area  :introduction, class: "posting_input", placeholder: "130文字以内", rows: "6"
         %p 画像
         = form.file_field :image,        class: "posting_image"
         = form.submit "投稿", class: "posting_submit_btn"
