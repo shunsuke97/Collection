@@ -13,7 +13,7 @@ ja:
           attributes:
             text:
               blank: 'を入力してください'
-              too_long: 'は50文字以内で入力してください'
+              too_long: 'は60文字以内で入力してください'
             title:
               blank: 'を入力してください'
               too_long: 'は20文字以内で入力してください'
@@ -21,10 +21,10 @@ ja:
               blank: 'を選択してください'
             author:
               blank: 'を入力してください'
-              too_long: 'は20文字以内で入力してください'
+              too_long: 'は12文字以内で入力してください'
             introduction:
               blank: 'を入力してください'
-              too_long: 'は120文字以内で入力してください'
+              too_long: 'は130文字以内で入力してください'
     attributes:
       post:
         text: '「フレーズ」'

@@ -5,6 +5,7 @@
       = form_with(model: @post, url: post_path, local: true) do |form|
         %h3
           編集する
+        = render 'layouts/error_messages', model: form.object
         %p フレーズ
         = form.text_field :text,         class: "posting_input", placeholder: "60文字以内"
         %p タイトル
@@ -14,6 +15,6 @@
         %p 説明
         = form.text_area :introduction,  class: "posting_input", placeholder: "130文字以内", rows: "6"
         %p 画像
-        %p (編集する場合のみ選択してください)
+        %p (変更する場合のみ選択してください)
         = form.file_field :image,        class: "posting_image"
         = form.submit "完了", class: "posting_submit_btn"

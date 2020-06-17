@@ -13,7 +13,6 @@ class PostsController < ApplicationController
   def create
     @post = Post.new(post_params)
     if @post.save
-      redirect_to :root
     else
       flash.now[:alert] = '投稿に失敗しました。'
       render 'new'
@@ -25,8 +24,12 @@ class PostsController < ApplicationController
   end
 
   def update
-    post = Post.find(params[:id])
-    post.update(post_params)
+    @post = Post.find(params[:id])
+    if @post.update(post_params)
+    else
+      flash.now[:alert] = '編集に失敗しました。'
+      render 'edit'
+    end
   end
 
   def destroy
