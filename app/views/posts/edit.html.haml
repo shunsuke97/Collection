@@ -7,13 +7,17 @@
           編集する
         = render 'layouts/error_messages', model: form.object
         %p フレーズ
-        = form.text_field :text,         class: "posting_input", placeholder: "60文字以内"
+        = form.text_field :text,         class: "posting_input", id: "js_phrase", placeholder: "60文字以内"
+        .js_phrase_count
         %p タイトル
-        = form.text_field :title,        class: "posting_input", placeholder: "20文字以内"
+        = form.text_field :title,        class: "posting_input", id: "js_title",  placeholder: "20文字以内"
+        .js_title_count
         %p 著者
-        = form.text_field :author,       class: "posting_input", placeholder: "12文字以内"
+        = form.text_field :author,       class: "posting_input", id: "js_author", placeholder: "12文字以内"
+        .js_author_count
         %p 説明
-        = form.text_area :introduction,  class: "posting_input", placeholder: "130文字以内", rows: "6"
+        = form.text_area :introduction,  class: "posting_input", id: "js_text",   placeholder: "130文字以内", rows: "4"
+        .js_text_count
         %p 画像
         %p (変更する場合のみ選択してください)
         = form.file_field :image,        class: "posting_image"
