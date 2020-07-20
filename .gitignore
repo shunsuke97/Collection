@@ -23,3 +23,6 @@
 
 # 投稿された画像
 public/uploads/*
+
+# 環境変数
+/.env
