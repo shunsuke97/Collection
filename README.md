@@ -11,12 +11,13 @@ http://18.178.89.167
 - Ruby 2.5.1
 - Rails 5.2.4.3
 - MySQL
-- Github
-- RSpec
 - Nginx
 - Unicorn
-- AWS(EC2.S3)
+- AWS(EC2.S3.IAM.VPC)
 - Capistrano
+- Docker/docker-compose
+- RSpec
+- Github
 #### 【フロントエンド】
 - Haml.Sass.Bootstrap
 - JavaScript.jQuery
@@ -34,6 +35,7 @@ http://18.178.89.167
 - 画像投稿機能
 - コメント投稿機能
 - Ajax通信によるコメント非同期化
+- 投稿フォーム文字数カウント機能
 - RSpecによる単体テスト
 
 ## :green_book: DEMO
@@ -64,8 +66,10 @@ http://18.178.89.167
 - 無駄な機能を省いて”言葉に触れる機会”にのみフォーカスしてもらえるようなデザインにした。
 
 ## :green_book: 今後追加したい機能
+- CircleCI/CDによるテスト及びデプロイの自動化(現在実装中)
+- AWSのサービス追加
+- Terraformを用いたインフラのコード化
 - 投稿検索機能非同期化
-- 投稿フォームの文字数カウント機能
 - いいね機能/いいね一覧
 - フォロー機能/フォロー一覧
 - テスト項目の追加
