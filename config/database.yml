@@ -2,9 +2,12 @@ default: &default
   adapter: mysql2
   encoding: utf8
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  username: root
-  password:
-  socket: /tmp/mysql.sock
+  # username: root
+  username: <%= ENV.fetch("MYSQL_USERNAME") { root } %>
+  # password: password # docker-compose.ymlのMYSQL_ROOT_PASSWORD
+  password: <%= ENV.fetch("MYSQL_ROOT_PASSWORD") { password } %>
+  # host: db           # docker-compose.ymlのservice名
+  host: <%= ENV.fetch("MYSQL_HOST") { localhost } %>  
 
 development:
   <<: *default
@@ -19,4 +22,3 @@ production:
   database: originalApp_production
   username: root
   password: <%= Rails.application.credentials.database_password %>
-  socket: /var/lib/mysql/mysql.sock
