@@ -13,6 +13,6 @@ class Post < ApplicationRecord
   def self.search(search)
     # 引数で渡されるsearchの中に何もなければ全ての投稿を取得する
     return Post.all unless search
-    Post.where('text LIKE(?)', "%#{search}%")
+    Post.where(['text LIKE ? OR title LIKE ? OR author LIKE ? OR introduction LIKE ?', "%#{search}%", "%#{search}%", "%#{search}%", "%#{search}%"])
   end
 end
