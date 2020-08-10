@@ -42,7 +42,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'haml-rails'
 gem 'font-awesome-sass'
-gem "bootstrap-sass", "~>3.3.6"
+gem "bootstrap-sass", "~>3.4.1"
 gem "jquery-rails"
 gem "jquery-ui-rails"
 gem 'devise'
