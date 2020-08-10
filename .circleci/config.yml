@@ -5,7 +5,8 @@ jobs:
     # ruby2.5.1を使用
     - image: circleci/ruby:2.5.1-node-browsers
       environment:
-        - BUNDLER_VERSION: 1.17.3
+        - BUNDLER_VERSION: 2.0.2
+        # - BUNDLER_VERSION: 1.17.3
         - RAILS_ENV: 'test'
     # mysql5.7を使用
     - image: circleci/mysql:5.7
@@ -32,7 +33,7 @@ jobs:
     - run:
         name: install dependencies
         command: |
-          gem install bundler -v 1.17.3
+          gem install bundler -v 2.0.2
           bundle install --jobs=4 --retry=3 --path vendor/bundle
 
     # packageなどのfileをcacheする
