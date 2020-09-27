@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="rspec" tests="20" skipped="0" failures="0" errors="0" time="8.494652" timestamp="2020-09-27T18:20:27+09:00" hostname="shunsuke">
+<properties>
+<property name="seed" value="17099"/>
+</properties>
+<testcase classname="spec.models.post_spec" name="Post 投稿の保存 投稿が保存できる場合 フレーズ、タイトル、著者、説明、画像があれば投稿は保存される" file="./spec/models/post_spec.rb" time="1.087766"></testcase>
+<testcase classname="spec.models.post_spec" name="Post 投稿の保存 投稿が保存できない場合 フレーズがないと投稿は保存できない" file="./spec/models/post_spec.rb" time="1.362643"></testcase>
+<testcase classname="spec.models.post_spec" name="Post 投稿の保存 投稿が保存できない場合 フレーズが61文字以上だと投稿は保存できない" file="./spec/models/post_spec.rb" time="0.760993"></testcase>
+<testcase classname="spec.models.post_spec" name="Post 投稿の保存 投稿が保存できない場合 タイトルがないと投稿は保存できない" file="./spec/models/post_spec.rb" time="0.532368"></testcase>
+<testcase classname="spec.models.post_spec" name="Post 投稿の保存 投稿が保存できない場合 タイトルが21文字以上だと投稿は保存できない" file="./spec/models/post_spec.rb" time="0.764626"></testcase>
+<testcase classname="spec.models.post_spec" name="Post 投稿の保存 投稿が保存できない場合 著者がないと投稿は保存できない" file="./spec/models/post_spec.rb" time="0.738705"></testcase>
+<testcase classname="spec.models.post_spec" name="Post 投稿の保存 投稿が保存できない場合 著者が13文字以上だと投稿は保存できない" file="./spec/models/post_spec.rb" time="0.824098"></testcase>
+<testcase classname="spec.models.post_spec" name="Post 投稿の保存 投稿が保存できない場合 説明がないと投稿は保存できない" file="./spec/models/post_spec.rb" time="0.789787"></testcase>
+<testcase classname="spec.models.post_spec" name="Post 投稿の保存 投稿が保存できない場合 説明が131文字以上だと投稿は保存できない" file="./spec/models/post_spec.rb" time="0.767082"></testcase>
+<testcase classname="spec.models.post_spec" name="Post 投稿の保存 投稿が保存できない場合 画像がないと投稿は保存できない" file="./spec/models/post_spec.rb" time="0.782856"></testcase>
+<testcase classname="spec.models.user_spec" name="User#create nameとemail、passwordとpassword_confirmationが存在すれば登録できること" file="./spec/models/user_spec.rb" time="0.007718"></testcase>
+<testcase classname="spec.models.user_spec" name="User#create  nameがない場合は登録できないこと" file="./spec/models/user_spec.rb" time="0.009272"></testcase>
+<testcase classname="spec.models.user_spec" name="User#create  nameが9文字以上のときは登録できないこと" file="./spec/models/user_spec.rb" time="0.005149"></testcase>
+<testcase classname="spec.models.user_spec" name="User#create nameが8文字以下のときには登録できること " file="./spec/models/user_spec.rb" time="0.004629"></testcase>
+<testcase classname="spec.models.user_spec" name="User#create emailがない場合は登録できないこと" file="./spec/models/user_spec.rb" time="0.004228"></testcase>
+<testcase classname="spec.models.user_spec" name="User#create  重複したemailが存在する場合は登録できないこと " file="./spec/models/user_spec.rb" time="0.026528"></testcase>
+<testcase classname="spec.models.user_spec" name="User#create passwordがない場合は登録できないこと" file="./spec/models/user_spec.rb" time="0.004064"></testcase>
+<testcase classname="spec.models.user_spec" name="User#create  passwordが6文字以上であれば登録できること " file="./spec/models/user_spec.rb" time="0.003913"></testcase>
+<testcase classname="spec.models.user_spec" name="User#create passwordが5文字以下の場合は登録できないこと" file="./spec/models/user_spec.rb" time="0.005369"></testcase>
+<testcase classname="spec.models.user_spec" name="User#create passwordが存在してもpassword_confirmationがない場合は登録できないこと" file="./spec/models/user_spec.rb" time="0.005879"></testcase>
+</testsuite>
