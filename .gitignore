@@ -26,3 +26,6 @@ public/uploads/*
 
 # 環境変数
 /.env
+
+# RSpecで使用する画像
+/spec/fixtures
