@@ -9,10 +9,14 @@ default: &default
 development:
   <<: *default
   database: originalApp_development
+  host: localhost
+  password:
 
 test:
   <<: *default
   database: originalApp_test
+  host: localhost
+  password: 
 
 production:
   <<: *default
