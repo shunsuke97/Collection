@@ -99,5 +99,5 @@ http://18.178.89.167
 - has_many :posts
 - has_many :comments
 
-### ER図
+## :green_book: ER図
 ![erd](https://user-images.githubusercontent.com/53967112/100571215-f1dc2b80-3315-11eb-8035-b83600725c1c.png)
