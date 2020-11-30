@@ -65,12 +65,6 @@ http://18.178.89.167
 - バリデーションのエラーメッセージを正確に表示させるようにした。
 - 無駄な機能を省いて”言葉に触れる機会”にのみフォーカスしてもらえるようなデザインにした。
 
-## :green_book: 今後追加したい機能
-- 投稿検索機能非同期化
-- いいね機能/いいね一覧
-- フォロー機能/フォロー一覧
-- テスト項目の追加
-
 ## :green_book: DB設計
 ### usersテーブル
 |Column|Type|Options|
@@ -104,3 +98,6 @@ http://18.178.89.167
 #### Association
 - has_many :posts
 - has_many :comments
+
+### ER図
+![erd](https://user-images.githubusercontent.com/53967112/100571215-f1dc2b80-3315-11eb-8035-b83600725c1c.png)
